@@ -1,0 +1,82 @@
+{
+  "author": {
+    "name": "John Doe",
+    "roles": [
+      "author"
+    ]
+  },
+  "bundled": {
+    "elgato-stream-deck": "^3.3.1"
+  },
+  "description": "jsii-deck",
+  "homepage": "https://github.com/acme/hello-jsii.git",
+  "jsiiVersion": "1.11.0 (build 1e9b8e1)",
+  "keywords": [],
+  "license": "ISC",
+  "name": "jsii-deck",
+  "readme": {
+    "markdown": "```text\ndocker container prune --force\ndocker image prune --force\ndocker volume prune --force\ndocker build -t test-deck .\ndocker create --name extract test-deck:latest\ndocker cp extract:/app/dist ./dist\n```"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acme/hello-jsii.git"
+  },
+  "schema": "jsii/0.10.0",
+  "targets": {
+    "dotnet": {
+      "namespace": "Acme.HelloNamespace",
+      "packageId": "Acme.HelloPackage"
+    },
+    "java": {
+      "maven": {
+        "artifactId": "hello-jsii",
+        "groupId": "com.acme.hello"
+      },
+      "package": "com.acme.hello"
+    },
+    "js": {
+      "npm": "jsii-deck"
+    },
+    "python": {
+      "distName": "acme.hello-jsii",
+      "module": "acme.hello_jsii"
+    }
+  },
+  "types": {
+    "jsii-deck.HelloJsii": {
+      "assembly": "jsii-deck",
+      "fqn": "jsii-deck.HelloJsii",
+      "initializer": {},
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/index.ts",
+        "line": 3
+      },
+      "methods": [
+        {
+          "locationInModule": {
+            "filename": "lib/index.ts",
+            "line": 4
+          },
+          "name": "sayHello",
+          "parameters": [
+            {
+              "name": "name",
+              "type": {
+                "primitive": "string"
+              }
+            }
+          ],
+          "returns": {
+            "type": {
+              "primitive": "string"
+            }
+          }
+        }
+      ],
+      "name": "HelloJsii"
+    }
+  },
+  "version": "1.0.0",
+  "fingerprint": "rWz9tZkvzmaak3tCWuOms32kEIqQXJqfzfUYfNKYwdE="
+}
